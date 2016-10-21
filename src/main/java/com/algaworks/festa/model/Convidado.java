@@ -9,9 +9,11 @@ public class Convidado {
 	}
 	
 	public Convidado(String nome, Integer quantidadeAcompanhantes) {
-		super();
 		this.nome = nome;
-		this.quantidadeAcompanhantes = quantidadeAcompanhantes;
+		if(quantidadeAcompanhantes > 0){
+			this.quantidadeAcompanhantes = quantidadeAcompanhantes;
+		}
+		else this.quantidadeAcompanhantes = 0;	
 	}
 	
 	public String getNome() {
@@ -26,7 +28,15 @@ public class Convidado {
 		return quantidadeAcompanhantes;
 	}
 	public void setQuantidadeAcompanhantes(Integer quantidadeAcompanhantes) {
-		this.quantidadeAcompanhantes = quantidadeAcompanhantes;
+		try{
+			if(quantidadeAcompanhantes >= 0){
+				this.quantidadeAcompanhantes = quantidadeAcompanhantes;
+			}
+			else quantidadeAcompanhantes = 0;
+		}
+		catch(Exception e){
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	
