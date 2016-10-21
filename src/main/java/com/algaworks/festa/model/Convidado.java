@@ -18,7 +18,9 @@ public class Convidado {
 		return nome;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		if(!nome.equals("")) 
+			this.nome = nome;
+		else this.nome="Bilau";
 	}
 	public Integer getQuantidadeAcompanhantes() {
 		return quantidadeAcompanhantes;
