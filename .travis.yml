@@ -1,6 +1,8 @@
 {
   "language": "java",
-   ./mvnw test 
+  jdk:
+   - oraclejdk8 
+  ./mvnw test 
 
 }
 
